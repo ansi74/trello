@@ -75,9 +75,8 @@ module.exports = {
         open: true,
         historyApiFallback: true,
         hot: true,
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        }
+        headers: { 'Access-Control-Allow-Origin': '*' },
+        proxy: [{ context: ['/api'], target: 'http://localhost:8080' }]
     },
 
     plugins: [
